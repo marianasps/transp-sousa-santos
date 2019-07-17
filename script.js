@@ -1,6 +1,9 @@
 $(document).ready(function () {
 
 
+
+
+
     $('.navbar-nav>li>a').on('click', function () {
         $('.navbar-collapse').collapse('hide');
         $('#icone-dropdown').toggleClass('fa-caret-up fa-caret-down');
@@ -14,8 +17,22 @@ $(document).ready(function () {
 
     $('#botao-toggler').on('click', function () {
         $('#icone-dropdown').toggleClass('fa-caret-up fa-caret-down');
-        
+
     });
+
+    $('.card').hover(
+        function () {
+            $(this).animate({
+                marginTop: "-=1%"
+            }, 200);
+        },
+        function () {
+            $(this).animate({
+                marginTop: "0%"
+            }, 200);
+        }
+
+    )
 
 
 })
