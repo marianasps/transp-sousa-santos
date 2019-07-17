@@ -1,9 +1,11 @@
-
 /*
     Falta:
         > Por a navbar mais pequenina.
         > Arranjar o quadrado azul para q ele fique selecionado, 
             ou nao (ver o q acontece no 'nao sei'
+        
+        > O smooth scroll n funciona no telemovel!~
+        (coisas q n funcionam no telemovel nao faltam btw)
 */
 
 body,
@@ -27,8 +29,8 @@ html {
 
 /* ---------------- TITULO ------------- */
 .titulo {
-
-    padding-top: 19vh;
+    /*19vh*/
+    padding-top: 10%;
 
     text-align: center;
     font-family: 'Oswald', Helvetica, sans-serif;
@@ -105,6 +107,10 @@ html {
     min-height: 40px !important;
 }
 
+.fontDaNavbar {
+    font-family: 'Concert One', cursive;
+}
+
 .navbar-toggle {
     padding: 0 0;
     margin-top: 7px;
@@ -126,6 +132,8 @@ html {
     box-shadow: inset 0 0 0 2px #53a7ea;
 }
 
+
+
 /*-------- FIM NAVBAR----------------- */
 
 .firstBg {
@@ -136,8 +144,120 @@ html {
 
 .secondDiv {
     background-color: pink;
+    height: 300px;
 
     /*clip-path: polygon(0 calc(100% - 30vw), 100% 0, 100% 100%, 0 100%);*/
     clip-path: polygon(0 50px, 100% 0, 100% 100%, 0 100%);
 
 }
+
+.terceiroDiv {
+    background: url('bg2.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 70px;
+    padding-bottom: 50px;
+
+}
+
+.terceiroDiv::after,
+.terceiroDiv::before {
+    position: absolute;
+    content: '';
+    width: 150px;
+    height: 150px;
+    background: pink;
+    bottom: -265px;
+    z-index: 10;
+}
+
+.terceiroDiv::before {
+    right: 50%;
+    transform: skew(0, 20deg);
+}
+
+.terceiroDiv::after {
+    left: 50%;
+    transform: skew(0, -20deg);
+}
+
+
+
+.dashed-border {
+    border-radius: 8px;
+    padding: 5px;
+    border: 1.5px solid black;
+    background: blue;
+}
+
+/*transition: box-shadow .5s;*/
+
+.card {
+    transition: transform .3s;
+    
+    border-radius: 10px;
+}
+
+.card:hover {
+    box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.555);
+    transform: translate3d(0px, -3px, 0px);
+}
+
+.centro {
+    text-align: center;
+}
+
+.cardezinhos {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.contactenos {
+    color: white;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.fancy {
+    -webkit-text-decoration: white double underline;
+    text-decoration: white double underline;
+}
+
+.footer {
+    height: 35px;
+    background-color: rgb(27, 27, 27);
+    font-size: 14px;
+    color: white;
+    vertical-align: center;
+    text-align: center;
+}
+
+
+hr {
+    border: none;
+    border-top: 1px solid rgba(255,255,255,.3);
+    border-bottom: 1px solid rgba(0,0,0,.08);
+    margin: 2.5em 0;
+    position: relative;
+  }
+  hr:before,hr:after {
+    content: '';
+    position: absolute;
+    bottom:0px;
+    height: 5em;
+    width: 100%;
+    z-index:0;
+
+    /*
+    background: radial-gradient(ellipse at bottom, rgba(255,255,255,0.35) 0%,rgba(255,255,255,0) 70%);
+    */
+  }
+  hr:after {
+    top:0px;
+    bottom:auto;
+    height: 1.5em;
+    background: radial-gradient(ellipse at top, rgba(0,0,0,0.06) 0%,rgba(0,0,0,0) 70%);
+    
+  }
