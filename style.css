@@ -1,0 +1,143 @@
+
+/*
+    Falta:
+        > Por a navbar mais pequenina.
+        > Arranjar o quadrado azul para q ele fique selecionado, 
+            ou nao (ver o q acontece no 'nao sei'
+*/
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+
+    background: url('bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    scroll-behavior: smooth;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* ---------------- TITULO ------------- */
+.titulo {
+
+    padding-top: 19vh;
+
+    text-align: center;
+    font-family: 'Oswald', Helvetica, sans-serif;
+    font-size: 80px;
+    transform: skewY(-4deg);
+    letter-spacing: 4px;
+    word-spacing: -7px;
+    color: rgb(67, 83, 228);
+    /* a cor que estava antes era TOMATO */
+
+    text-shadow:
+        -1px -1px 0 rgb(28, 13, 230),
+        -2px -2px 0 rgb(28, 13, 230),
+        -3px -3px 0 rgb(28, 13, 230),
+        -4px -4px 0 rgb(28, 13, 230),
+        -5px -5px 0 rgb(28, 13, 230),
+        -6px -6px 0 rgb(28, 13, 230),
+        -7px -7px 0 rgb(28, 13, 230),
+        -8px -8px 0 rgb(28, 13, 230),
+        -30px 20px 40px rgba(20, 38, 199, 0);
+    /* a cor que estava antes era FIREBRICK e DIMGREY */
+
+}
+
+
+/* ---------------- FIM TITULO ------------- */
+
+
+
+
+/* ---------------- NAVBAR ---------------- */
+.navbar-toggler-icon {
+    color: yellow !important;
+}
+
+#botao-toggler {
+    outline: none;
+    border: none;
+}
+
+.bg-dark {
+    transition: 750ms ease;
+    background: transparent !important;
+}
+
+.bg-dark.scrolled {
+    background: black !important;
+}
+
+.sticky {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+
+
+/*---- PARA POR MAIS PEQUENA ----- */
+.navbar-nav>li>a,
+.navbar-brand {
+    padding-top: 5px !important;
+    padding-bottom: 0 !important;
+    height: 30px;
+    color: white;
+    transition: box-shadow .5s;
+    transition: color .4s;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+
+.navbar {
+    font-family: 'Concert One', cursive;
+    min-height: 40px !important;
+}
+
+.navbar-toggle {
+    padding: 0 0;
+    margin-top: 7px;
+    margin-bottom: 0;
+}
+
+/*------ PARA POR MAIS PEQUENA FIM ----- */
+
+.navbar-nav>li>a:hover {
+    color: yellow !important;
+    /*box-shadow: inset 0 0 0 2px #53a7ea; */
+}
+
+.navbar-brand:hover {
+    color: white;
+}
+
+.navbar-nav>li>a:focus {
+    box-shadow: inset 0 0 0 2px #53a7ea;
+}
+
+/*-------- FIM NAVBAR----------------- */
+
+.firstBg {
+    /*background-color: lightgoldenrodyellow; */
+    height: 92%;
+    z-index: -1;
+}
+
+.secondDiv {
+    background-color: pink;
+
+    /*clip-path: polygon(0 calc(100% - 30vw), 100% 0, 100% 100%, 0 100%);*/
+    clip-path: polygon(0 50px, 100% 0, 100% 100%, 0 100%);
+
+}
