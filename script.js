@@ -34,6 +34,6 @@ $(document).ready(function () {
 
     )
 
-    $('#ano').text(new Date().getFullYear() +"working");
+    $('#ano').text(new Date().getFullYear());
 
 })
