@@ -7,14 +7,18 @@
 body,
 html {
     height: 100%;
+    padding: 0;
     margin: 0;
+
 
     background: url('bg.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    
     scroll-behavior: smooth;
+
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -35,6 +39,8 @@ html {
     letter-spacing: 4px;
     word-spacing: -7px;
     color: rgb(67, 83, 228);
+
+    /*rgb(67, 83, 228)*/
     /* a cor que estava antes era TOMATO */
 
     text-shadow:
@@ -133,18 +139,22 @@ html {
 /*-------- FIM NAVBAR----------------- */
 
 .firstBg {
-    /*background-color: lightgoldenrodyellow; */
-    height: 92%;
-    z-index: -1;
+    height: 92vh;
+    overflow-x: hidden;
+    max-width: 100%
 }
 
 .secondDiv {
     background-color: rgb(59, 59, 59);
-    height: 80vh;
+    height: 100vh;
+    
+    max-width: 100%;
+    overflow: hidden;
+
 
     /*clip-path: polygon(0 calc(100% - 30vw), 100% 0, 100% 100%, 0 100%);*/
     clip-path: polygon(0 50px, 100% 0, 100% 100%, 0 100%);
-    z-index: 1;
+    /*z-index: 1;*/
     color: white;
 
 }
@@ -153,11 +163,11 @@ html {
     text-align: justify;
     text-justify: inter-word;
     vertical-align: center;
-    padding-top: 7%;
+    padding-top: 14%;
 }
 
 .quemSomosTitulo {
-    padding-top: 7%
+    padding-top: 9%
 }
 
 
@@ -179,7 +189,7 @@ html {
     width: 150px;
     height: 50px;
     background: rgb(59, 59, 59);
-    bottom: -73%;
+    bottom: -94%;
     z-index: 0;
 }
 
@@ -277,7 +287,7 @@ hr:after {
 
 .font2 {
     font-family: 'Volkhov', serif;
-    font-size: 16px;
+    font-size: 17px;
 
 }
 
